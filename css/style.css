@@ -1,0 +1,227 @@
+/* FONT STYLES */
+/* font-family: 'Fredoka One', cursive;
+font-family: 'Lato', sans-serif; */
+
+/* HTML5 RESET */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* MY STYLES */
+
+.wrapper{
+    width: 650px;
+    margin: 0 auto;
+}
+.page-header h2{
+    margin-top: 0;
+}
+table tr td:last-child a{
+    margin-right: 15px;
+}
+
+
+/* NAVBAR STYLES */
+
+.navbar.navbar-default {
+  margin-bottom: 0;
+  background-color: #acfe71;
+  border: 0;
+  border-radius: 0;
+}
+
+#primary-nav .navbar-nav>.active>a {
+  background-color: #acfe71;
+}
+
+.inner-nav {
+  width: 80%;
+  margin-top: 5px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2em;
+}
+
+#primary-nav .navbar-nav>li>a {
+    color: #666666;
+}
+
+#right-nav li {
+  margin: 0 5px;
+}
+
+#right-nav .btn {
+  background-color: #1fa0a0;
+  border: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.nav-logo {
+  /* width: 50px; */
+  width: 140px;
+  margin-top: 1px;
+  margin-right: 30px;
+}
+
+/* HEADER STYLES */
+
+#jmain {
+  background-image: url(../img/main2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  }
+
+#jsection1 .container,
+#jsection2 .container,
+#jsection3 .container {
+  min-height: 400px;
+}
+
+#jsection1 {
+  background-image: url(../img/1.png);
+  background-size: cover;
+  height: 100%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#jsection2 {
+  background-image: url(../img/2.png);
+  background-size: cover;
+  height: 100%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#jsection3 {
+  background-image: url(../img/3.png);
+  background-size: cover;
+  height: 100%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mright70 {
+  margin-right: 70px;
+  line-height: 80px;
+}
+
+.mleft50 {
+  margin-left: 50px;
+  line-height: 80px;
+}
+
+/* MODAL STYLES */
+
+#modal-header {
+  background-color: #acfe71;
+  text-align: center;
+  border-bottom: 4px solid #1fa0a0;
+}
+
+#modal-logo {
+  width: 200px;
+}
+
+#modal-body .btn {
+  background-color: #1fa0a0;
+  border: 0;
+  font-family: 'Lato', sans-serif;
+  margin: 15px auto;
+}
