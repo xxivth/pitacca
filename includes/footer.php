@@ -10,7 +10,7 @@
    </div>
 </div> -->
 
-<footer>
+<footer class="fixed-bottom">
 	<div class="footer os-animation" data-os-animation="slideInRight" data-os-animation-delay="0s">
   		<div class="container">
   			<div class="row">

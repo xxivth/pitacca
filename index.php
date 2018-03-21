@@ -12,29 +12,33 @@
                 <h3>PHP CRUD Grid</h3>
             </div>
             <div class="row">
+              <p>
+                  <a href="create.php" class="btn btn-success">Create</a>
+              </p>
                 <table class="table table-striped table-bordered">
                   <thead>
                     <tr>
                       <th>Name</th>
                       <th>Balance</th>
                       <th>Mobile Number</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
                   <?php
-                   include 'includes/dbconnect.php';
-                   // $pdo = Database::connect();
-                   $sql = 'SELECT * FROM users ORDER BY id DESC';
-                   $sql = "SELECT * FROM users";
-                   $result = mysqli_query($conn,$sql);
-                   foreach ($row = mysqli_fetch_assoc($result)) {
-                            echo '<tr>';
-                            echo '<td>'. $row['firstName'] . '</td>';
-                            echo '<td>'. $row['balance'] . '</td>';
-                            echo '<td>'. $row['phone'] . '</td>';
-                            echo '</tr>';
-                   }
-                   // Database::disconnect();
+                     include 'includes/dbconnect.php';
+                     $sql = 'SELECT * FROM users ORDER BY userID DESC';
+                     $result = mysqli_query($conn, $sql);
+
+                     while ($row = mysqli_fetch_assoc($result)) {
+                              echo '<tr>';
+                              echo '<td>'. $row['firstName'] . '</td>';
+                              echo '<td>'. $row['balance'] . '</td>';
+                              echo '<td>'. $row['phone'] . '</td>';
+                              echo '<td><a class="btn" href="read.php?id='.$row['userID'].'">Read</a></td>';
+                              echo '</tr>';
+                     }
+                     mysqli_close($conn);
                   ?>
                   </tbody>
             </table>

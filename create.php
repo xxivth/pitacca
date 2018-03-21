@@ -1,118 +1,128 @@
 <?php
-// Include config file
-require_once 'includes/config.php';
 
-// Define variables and initialize with empty values
-$firstName = $phone = $balance = "";
-$name_err = $phone_err = $balance_err = "";
+    require 'includes/dbconnect.php';
 
-// Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    // Validate name
-    $input_name = trim($_POST["firstName"]);
-    if(empty($input_name)){
-        $name_err = "Please enter a name.";
-    } elseif(!filter_var(trim($_POST["firstName"]), FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z'-.\s ]+$/")))){
-        $name_err = 'Please enter a valid name.';
-    } else{
-        $firstName = $input_name;
-    }
+    if ( !empty($_POST)) {
+        // keep track validation errors
+        $nameError = null;
+        $lnameError = null;
+        $emailError = null;
+        $mobileError = null;
 
-    // Validate address
-    $input_phone = trim($_POST["phone"]);
-    if(empty($input_phone)){
-        $phone_err = 'Please enter a phone number.';
-    } else{
-        $phone = $input_phone;
-    }
+        // keep track post values
+        $name = $_POST['name'];
+        $lastname = $_POST['lastname'];
+        $email = $_POST['email'];
+        $mobile = $_POST['mobile'];
 
-    // Validate salary
-    $input_balance = trim($_POST["balance"]);
-    if(empty($input_balance)){
-        $balance_err = "Please enter the balance amount.";
-    } elseif(!ctype_digit($input_balance)){
-        $balance_err = 'Please enter a positive integer value.';
-    } else{
-        $balance = $input_balance;
-    }
-
-    // Check input errors before inserting in database
-    if(empty($name_err) && empty($phone_err) && empty($balance_err)){
-        // Prepare an insert statement
-        $sql = "INSERT INTO users (firstName, phone, balance) VALUES (?, ?, ?)";
-
-        if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_name, $param_phone, $param_balance);
-
-            // Set parameters
-            $param_name = $firstName;
-            $param_phone = $phone;
-            $param_balance = $balance;
-
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Records created successfully. Redirect to landing page
-                header("location: index.php");
-                exit();
-            } else{
-                echo "Something went wrong. Please try again later.";
-            }
+        // validate input
+        $valid = true;
+        if (empty($name)) {
+            $nameError = 'Please enter Name';
+            $valid = false;
         }
 
-        // Close statement
-        mysqli_stmt_close($stmt);
-    }
+        // if (empty($lastname)) {
+          if (isset($_POST['$lastname'])) {
+            $lnameError = 'Please enter Last Name';
+            $valid = false;
+        }
 
-    // Close connection
-    mysqli_close($link);
-}
+        if (empty($email)) {
+            $emailError = 'Please enter Email Address';
+            $valid = false;
+        } else if ( !filter_var($email,FILTER_VALIDATE_EMAIL) ) {
+            $emailError = 'Please enter a valid Email Address';
+            $valid = false;
+        }
+
+        if (empty($mobile)) {
+            $mobileError = 'Please enter Mobile Number';
+            $valid = false;
+        }
+
+        // insert data
+        if ($valid) {
+            $name = $_POST['name'];
+            $lastname = $_POST['lastname'];
+            $email = $_POST['email'];
+            $mobile = $_POST['mobile'];
+
+          	$sql = "INSERT INTO users (firstName,lastName,email,phone) VALUES ('$name', '$lastname', '$email', '$mobile')";
+          	$result = mysqli_query ($conn,$sql);
+
+            if ($result === TRUE) {
+          			echo "New user added successfully";
+          		} else {
+          			echo "Error: " . $sql . "<br>" . mysqli_errno($conn);
+          		}
+        }
+    } mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Create Record</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        .wrapper{
-            width: 500px;
-            margin: 0 auto;
-        }
-    </style>
+    <meta charset="utf-8">
+    <link   href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="page-header">
-                        <h2>Create Record</h2>
+    <div class="container">
+
+                <div class="span10 offset1">
+                    <div class="row">
+                        <h3>Create a Customer</h3>
                     </div>
-                    <p>Please fill this form and submit to add employee record to the database.</p>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                        <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
-                            <label>Name</label>
-                            <input type="text" name="firstName" class="form-control" value="<?php echo $firstName; ?>">
-                            <span class="help-block"><?php echo $name_err;?></span>
+
+                    <form class="form-horizontal" action="create.php" method="post">
+                      <div class="control-group <?php echo !empty($nameError)?'error':'';?>">
+                        <label class="control-label">Name</label>
+                        <div class="controls">
+                            <input name="name" type="text"  placeholder="Name" value="<?php echo !empty($name)?$name:'';?>">
+                            <?php if (!empty($nameError)): ?>
+                                <span class="help-inline"><?php echo $nameError;?></span>
+                            <?php endif; ?>
                         </div>
-                        <div class="form-group <?php echo (!empty($phone_err)) ? 'has-error' : ''; ?>">
-                            <label>Phone</label>
-                            <input name="phone" class="form-control" value="<?php echo $phone; ?>">
-                            <span class="help-block"><?php echo $phone_err;?></span>
+                      </div>
+
+                      <div class="control-group <?php echo !empty($lnameError)?'error':'';?>">
+                        <label class="control-label">Last Name</label>
+                        <div class="controls">
+                            <input name="lastname" type="text"  placeholder="Name" value="<?php echo !empty($lastname)?$lastname:'';?>">
+                            <?php if (!empty($lnameError)): ?>
+                                <span class="help-inline"><?php echo $lnameError;?></span>
+                            <?php endif; ?>
                         </div>
-                        <div class="form-group <?php echo (!empty($balance_err)) ? 'has-error' : ''; ?>">
-                            <label>Balance</label>
-                            <input type="text" name="balance" class="form-control" value="<?php echo $balance; ?>">
-                            <span class="help-block"><?php echo $balance_err;?></span>
+                      </div>
+
+                      <div class="control-group <?php echo !empty($emailError)?'error':'';?>">
+                        <label class="control-label">Email Address</label>
+                        <div class="controls">
+                            <input name="email" type="text" placeholder="Email Address" value="<?php echo !empty($email)?$email:'';?>">
+                            <?php if (!empty($emailError)): ?>
+                                <span class="help-inline"><?php echo $emailError;?></span>
+                            <?php endif;?>
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="index.php" class="btn btn-default">Cancel</a>
+                      </div>
+
+                      <div class="control-group <?php echo !empty($mobileError)?'error':'';?>">
+                        <label class="control-label">Mobile Number</label>
+                        <div class="controls">
+                            <input name="mobile" type="text"  placeholder="Mobile Number" value="<?php echo !empty($mobile)?$mobile:'';?>">
+                            <?php if (!empty($mobileError)): ?>
+                                <span class="help-inline"><?php echo $mobileError;?></span>
+                            <?php endif;?>
+                        </div>
+                      </div>
+                      <div class="form-actions">
+                          <button type="submit" class="btn btn-success">Create</button>
+                          <a class="btn" href="index.php">Back</a>
+                        </div>
                     </form>
                 </div>
-            </div>
-        </div>
-    </div>
-</body>
+
+    </div> <!-- /container -->
+  </body>
 </html>

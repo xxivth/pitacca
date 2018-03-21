@@ -21,7 +21,7 @@ time, mark, audio, video {
     padding:0;
     border:0;
     outline:0;
-    font-size:100%;
+    /* font-size:100%; */
     vertical-align:baseline;
     background:transparent;
 }
@@ -124,7 +124,7 @@ table tr td:last-child a{
   background-color: #acfe71;
   border: 0;
   border-radius: 0;
-  border-bottom: 2px solid #1fa0a0;
+  /* border-bottom: 2px solid #1fa0a0; */
 }
 #primary-nav .navbar-nav>.active>a {
   background-color: #acfe71;
@@ -166,7 +166,7 @@ table tr td:last-child a{
   background-repeat: no-repeat;
   }
 #jsection-img1, #jsection-img2, #jsection-img3 {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   margin: 0 auto;
   display: table;
@@ -190,7 +190,7 @@ table tr td:last-child a{
   background-image: url(../img/2.png);
 }
 #jsection-img3 {
-  background-image: url(../img/3.png);
+  background-image: url(../img/test3.png);
 }
 #jsection1 .container,
 #jsection2 .container,
@@ -221,7 +221,7 @@ table tr td:last-child a{
   font-family: 'Fredoka One', cursive;
   letter-spacing: 1px;
   font-size: 280%;
-  color: #cccccc;
+  /* color: #cccccc; */
 }
 .feature-section h3 {
   font-family: 'Lato', sans-serif;
@@ -261,12 +261,12 @@ table tr td:last-child a{
 
 /* =================== account page styles ===================*/
 #account-page {
-  min-height: 100%;
+  /* height: 100%; */
   width: 100%;
   padding: 50px 30px;
 }
 .vertical-menu {
-  width: 100%;
+  width: 100%
   font-family: 'Lato', sans-serif;
 }
 .vertical-menu a {

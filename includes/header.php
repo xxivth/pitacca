@@ -26,13 +26,13 @@
 
     <!-- animation -->
   	<link rel="stylesheet" type="text/css" href="animate/style.css">
-  	<!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   	<link href="animate/css/animate.css" rel="stylesheet"/>
   	<link href="animate/css/waypoints.css" rel="stylesheet"/>
   	<script src="animate/js/jquery.waypoints.min.js" type="text/javascript"></script>
-  	<script src="animate/js/waypoints.js" type="text/javascript"></script> -->
+  	<script src="animate/js/waypoints.js" type="text/javascript"></script>
 
   </head>
   <body>

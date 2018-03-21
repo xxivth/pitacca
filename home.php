@@ -53,10 +53,10 @@
         <div class="container">
           <div class="row text-center">
             <div class="col-sm-offset-9 col-sm-3 col-xs-12">
-              <h1 class="display-4">E-Load</h1>
-              <h3>Never run out of load again</h3>
-              <!-- <a href="#" class="btn">Get Started</a> -->
-              <button class="btn btn-large" type="button" name="button">Buy Load!</button>
+                  <h1 class="display-4">E-Load</h1>
+                  <h3>Never run out of load again</h3>
+                  <!-- <a href="#" class="btn">Get Started</a> -->
+                  <button class="btn btn-large" type="button" name="button">Buy Load!</button>
             </div>
           </div>
         </div>

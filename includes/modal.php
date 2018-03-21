@@ -49,29 +49,29 @@
                   <div class="row tab-pane fade" id="signup">
   	                  <div class="col-xs-12">
   	                      <div class="well">
-  	                          <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+  	                          <form id="loginForm" method="POST" action="includes/signup.php" novalidate="novalidate">
                                 <div class="col-xs-6">
   	                              <div class="form-group">
-  	                                  <label for="first-name" class="control-label">First Name</label>
-  	                                  <input type="text" class="form-control" id="first-name" name="first-name" value="" required="" title="Please enter you first name" placeholder="">
+  	                                  <label for="firstname" class="control-label">First Name</label>
+  	                                  <input type="text" class="form-control" id="first-name" name="firstname" value="" required="" title="Please enter you first name" placeholder="">
   	                                  <span class="help-block"></span>
   	                              </div>
                                   <div class="form-group">
-  	                                  <label for="last-name" class="control-label">Last Name</label>
-  	                                  <input type="text" class="form-control" id="last-name" name="last-name" value="" required="" title="Please enter you last name" placeholder="">
+  	                                  <label for="lastname" class="control-label">Last Name</label>
+  	                                  <input type="text" class="form-control" id="last-name" name="lastname" value="" required="" title="Please enter you last name" placeholder="">
   	                                  <span class="help-block"></span>
   	                              </div>
                                   <div class="form-group">
-  	                                  <label for="phone-num" class="control-label">Phone Number</label>
-  	                                  <input type="number" class="form-control" id="phone-num" name="phone-num" value="" required="" title="Please enter you phone number" placeholder="">
+  	                                  <label for="phone" class="control-label">Phone Number</label>
+  	                                  <input type="number" class="form-control" id="phone-num" name="phone" value="" required="" title="Please enter you phone number" placeholder="">
   	                                  <span class="help-block"></span>
   	                              </div>
                                 </div>
 
                                 <div class="col-xs-6">
   	                              <div class="form-group">
-  	                                  <label for="e-mail" class="control-label">Email</label>
-  	                                  <input type="email" class="form-control" id="e-mail" name="e-mail" value="" required="" title="Please enter your password">
+  	                                  <label for="email" class="control-label">Email</label>
+  	                                  <input type="email" class="form-control" id="e-mail" name="email" value="" required="" title="Please enter your password">
   	                                  <span class="help-block"></span>
   	                              </div>
   	                              <div class="form-group">
@@ -87,7 +87,7 @@
                                 </div>
 
                                 <div class="submit-create">
-  	                              <button type="submit" class="btn btn-success btn-block">Create account</button>
+  	                              <button type="submit" name="submit" class="btn btn-success btn-block">Create account</button>
                                   <p class="text-center"><small>By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</small></p>
                                   <span class="help-block"></span>
                                 </div>
