@@ -23,10 +23,10 @@
         <div class="container">
           <div class="row text-center">
             <div class="col-sm-offset-9 col-sm-3 col-xs-12">
-            <h1 class="display-4">Fund Transfer</h1>
-            <h3>Send money in an instant</h3>
-            <!-- <a href="#" class="btn">Get Started</a> -->
-            <button class="btn btn-large" type="button" name="button">Send Money!</button>
+              <h1 class="display-4">Fund Transfer</h1>
+              <h3>Send money in an instant</h3>
+              <!-- <a href="#" class="btn">Get Started</a> -->
+              <button class="btn btn-large" type="button" name="button">Send Money!</button>
             </div>
           </div>
         </div>
@@ -38,10 +38,10 @@
         <div class="container">
           <div class="row text-center">
             <div class="col-sm-3 col-xs-12">
-            <h1 class="display-4">Pay Bills</h1>
-            <h3>Pay bills, book flights, do more</h3>
-            <!-- <a href="#" class="btn">Get Started</a> -->
-            <button class="btn btn-large" type="button" name="button">Pay Bills!</button>
+              <h1 class="display-4">Pay Bills</h1>
+              <h3>Pay bills, book flights, do more</h3>
+              <!-- <a href="#" class="btn">Get Started</a> -->
+              <button class="btn btn-large" type="button" name="button">Pay Bills!</button>
             </div>
           </div>
         </div>
@@ -53,10 +53,10 @@
         <div class="container">
           <div class="row text-center">
             <div class="col-sm-offset-9 col-sm-3 col-xs-12">
-            <h1 class="display-4">E-Load</h1>
-            <h3>Never run out of load again</h3>
-            <!-- <a href="#" class="btn">Get Started</a> -->
-            <button class="btn btn-large" type="button" name="button">Load Now!</button>
+              <h1 class="display-4">E-Load</h1>
+              <h3>Never run out of load again</h3>
+              <!-- <a href="#" class="btn">Get Started</a> -->
+              <button class="btn btn-large" type="button" name="button">Buy Load!</button>
             </div>
           </div>
         </div>

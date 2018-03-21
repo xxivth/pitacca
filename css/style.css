@@ -263,10 +263,11 @@ table tr td:last-child a{
 #account-page {
   min-height: 100%;
   width: 100%;
-  padding: 30px;
+  padding: 50px 30px;
 }
 .vertical-menu {
-  width: 100%; /* Set a width if you like */
+  width: 100%;
+  font-family: 'Lato', sans-serif;
 }
 .vertical-menu a {
   background-color: #eee; /* Grey background color */
@@ -274,19 +275,85 @@ table tr td:last-child a{
   display: block; /* Make the links appear below each other */
   padding: 12px; /* Add some padding */
   text-decoration: none; /* Remove underline from links */
+  padding-left: 30px;
 }
 .vertical-menu a:hover {
-  background-color: #ccc; /* Dark grey background on mouse-over */
+  background-color: #ccc;
+  border-left: 10px solid #1fa0a0;
+  text-decoration: none;
+  color: #1fa0a0;
 }
 .vertical-menu a.active {
-  background-color: #acfe71; /* Add a green color to the "active/current" link */
+  background-color: #acfe71;
   color: #666666;
   font-weight: bold;
+  border-left: 10px solid #1fa0a0;
+  font-size: 105%;
 }
 #account-img{
   width: 60%;
   margin: 0 auto;
-  box-shadow: 5px 8px 8px #888888;
+  padding: 7px;
+  border: 1px solid #1fa0a0;
+}
+#account-page .card-header {
+  margin: 0;
+  padding: 0;
+}
+#account-page .well {
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid #666666; */
+}
+#account-page .card-header {
+  padding: 20px;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+  font-size: 110%;
+}
+#account-page .logo-font {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 1px;
+  color: #474747;
+}
+#account-page .color-blue {
+  color: #23bcbc;
+}
+#account-page .balance-header {
+  font-size: 130%;
+  word-spacing: 5px;
+  margin-top: 30px;
+}
+#account-page .account-balance{
+  font-size: 200%;
+  font-family: 'Fredoka One', cursive;
+  color: #474747;
+}
+.card-header h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+.content .sub-content{
+  padding: 0 20px;
+}
+#account-page .btn {
+  background-color: #acfe71;
+  padding: 3px 0;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #474747;
+}
+#account-page .btn:hover {
+  background-color: #1fa0a0;
+  color: #fff;
+}
+#account-page .text-bold {
+  font-weight: bold;
+}
+.borderless td, .borderless th {
+    border: none !important;
+}
+#account-page .marginb-30 {
+  margin-bottom: 30px;
 }
 
 /* ======================== footer styles ======================= */
