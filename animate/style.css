@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+html, body {
+	height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#jmain{
+	height: 100%;
+  width: 100%;
+  margin: auto;
+  display: table;
+  top: 0;
+}
+#jmain img {
+	margin: 0 auto;
+}
+#jmain .jmain-inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+	max-width: none;
+}
+#jmain .content {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 10%;
+}
+#jmain .btn {
+  margin-top: 30px;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Fredoka One', cursive;
+  /* font-size: 135%; */
+  font-weight: 400;
+  color: #1fa0a0;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: solid #1fa0a0;
+  padding: 10px 20px;
+  border-radius: 9px;
+	transition: all 0.5s;
+}
+#jmain .btn:hover {
+  color: #666666;
+  border: solid #666666;
+}
+/*--- Media Queries --*/
+@media screen and (max-width: 900px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}

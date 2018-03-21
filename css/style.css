@@ -1,6 +1,8 @@
 /* FONT STYLES */
 /* font-family: 'Fredoka One', cursive;
 font-family: 'Lato', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
 
 /* HTML5 RESET */
 html, body, div, span, object, iframe,
@@ -98,7 +100,11 @@ input, select {
     vertical-align:middle;
 }
 
-/* MY STYLES */
+/* ======================== MY STYLES ========================= */
+
+html, body {
+  font-family: 'Lato', sans-serif;
+}
 
 .wrapper{
     width: 650px;
@@ -111,42 +117,37 @@ table tr td:last-child a{
     margin-right: 15px;
 }
 
-
-/* NAVBAR STYLES */
+/* ======================= NAVBAR STYLES ====================== */
 
 .navbar.navbar-default {
   margin-bottom: 0;
   background-color: #acfe71;
   border: 0;
   border-radius: 0;
+  border-bottom: 2px solid #1fa0a0;
 }
-
 #primary-nav .navbar-nav>.active>a {
   background-color: #acfe71;
 }
-
 .inner-nav {
   width: 80%;
   margin-top: 5px;
   font-family: 'Fredoka One', cursive;
   font-size: 1.2em;
 }
-
 #primary-nav .navbar-nav>li>a {
-    color: #666666;
+  color: #666666;
+  letter-spacing: 1px;
 }
-
 #right-nav li {
   margin: 0 5px;
 }
-
 #right-nav .btn {
   background-color: #1fa0a0;
   border: 0;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
 }
-
 .nav-logo {
   /* width: 50px; */
   width: 140px;
@@ -154,74 +155,206 @@ table tr td:last-child a{
   margin-right: 30px;
 }
 
-/* HEADER STYLES */
-
+/* ===================== HEADER STYLES ===================== */
 #jmain {
-  background-image: url(../img/main2.png);
+    background-color: #acfe71;
+}
+#jmain .jmain-inner {
+  background-image: url(../img/main.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px;
   }
-
+#jsection-img1, #jsection-img2, #jsection-img3 {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#jsection1, #jsection2, #jsection3 {
+  border-top: 10px solid #1fa0a0;
+  height: 70%;
+}
+#jsection-img1 {
+  background-image: url(../img/1.png);
+}
+#jsection1,
+#jsection2,
+#jsection3 {
+  background-color: #1fa0a0;
+}
+#jsection-img2 {
+  background-image: url(../img/2.png);
+}
+#jsection-img3 {
+  background-image: url(../img/3.png);
+}
 #jsection1 .container,
 #jsection2 .container,
 #jsection3 .container {
-  min-height: 400px;
+  vertical-align: middle;
+  display: table-cell;
+  padding-bottom: 5%;
+  color: #e5e5e5;
+  padding: 0 50px;
 }
-
-#jsection1 {
-  background-image: url(../img/1.png);
-  background-size: cover;
-  height: 100%;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-position: center;
+.feature-section .btn {
+  margin-top: 10px;
+  font-family: 'Lato', sans-serif;
+  color: #188080;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: solid #188080;
+  padding: 8px 13px;
+  border-radius: 9px;
+  background-color: #acfe71;
+  transition: all 0.5s;
 }
-
-#jsection2 {
-  background-image: url(../img/2.png);
-  background-size: cover;
-  height: 100%;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-position: center;
+.feature-section .btn:hover {
+  color: #666666;
+  border: solid #666666;
 }
-
-#jsection3 {
-  background-image: url(../img/3.png);
-  background-size: cover;
-  height: 100%;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-position: center;
+.feature-section h1 {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 1px;
+  font-size: 280%;
+  color: #cccccc;
 }
-
+.feature-section h3 {
+  font-family: 'Lato', sans-serif;
+}
 .mright70 {
   margin-right: 70px;
   line-height: 80px;
 }
-
 .mleft50 {
   margin-left: 50px;
   line-height: 80px;
 }
 
-/* MODAL STYLES */
+/* ======================= MODAL STYLES ======================= */
 
 #modal-header {
   background-color: #acfe71;
   text-align: center;
   border-bottom: 4px solid #1fa0a0;
+  border-radius: 8px 8px 0 0;
 }
-
 #modal-logo {
   width: 200px;
 }
-
 #modal-body .btn {
   background-color: #1fa0a0;
   border: 0;
   font-family: 'Lato', sans-serif;
   margin: 15px auto;
+}
+#modal-body .btn-grey {
+  background-color: #666666;
+}
+#login-overlay .modal-content {
+  border-radius: 8px;
+}
+
+/* =================== account page styles ===================*/
+#account-page {
+  min-height: 100%;
+  width: 100%;
+  padding: 30px;
+}
+.vertical-menu {
+  width: 100%; /* Set a width if you like */
+}
+.vertical-menu a {
+  background-color: #eee; /* Grey background color */
+  color: #666666; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+.vertical-menu a:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+.vertical-menu a.active {
+  background-color: #acfe71; /* Add a green color to the "active/current" link */
+  color: #666666;
+  font-weight: bold;
+}
+#account-img{
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 5px 8px 8px #888888;
+}
+
+/* ======================== footer styles ======================= */
+footer {
+  font-family: 'Lato', sans-serif;
+	height: auto;
+	font-size: 15px;
+  background-color: #666666;
+  padding: 40px 0 30px 0;
+  color: #e5e5e5;
+  border-top: 3px solid #1fa0a0;
+}
+#footer-credits {
+	height: auto;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+#footer-credits p {
+	margin: 0;
+}
+#logo-footer {
+	width: 150px;
+	margin: 0 auto;
+}
+.footer .footer-button {
+  	margin-top: 15px;
+    background-color: #1fa0a0;
+    border: 0;
+    font-family: 'Lato', sans-serif;
+}
+footer a {
+	color: white;
+	text-decoration: none;
+}
+footer a:hover {
+	color: #6cb6f5;
+}
+footer li {
+	color: white;
+	text-decoration: none;
+  list-style-type: none;
+}
+footer h4 {
+  border-bottom: 2px solid #acfe71;
+  padding-bottom: 10px;
+  margin-right: 40px;
+  line-height: 5px;
+}
+.copyright {
+  background-color: #515151;
+  text-align: center;
+  line-height: 2;
+  color: #b2b2b2;
+}
+.copyright p {
+    margin: 0 !important;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.marginr-30 {
+  margin-right: 30px;
+}
+.copyright .logo-font {
+  font-family: 'Fredoka One', cursive;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #acfe71;
+}
+.copyright .color-blue {
+  color: #23bcbc;
 }
