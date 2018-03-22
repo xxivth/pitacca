@@ -11,7 +11,7 @@
 </div> -->
 
 <footer class="fixed-bottom">
-	<div class="footer os-animation" data-os-animation="slideInRight" data-os-animation-delay="0s">
+	<div class="footer os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">
   		<div class="container">
   			<div class="row">
 				<!-- <div class="col-md-3 text-center">
@@ -64,7 +64,7 @@
 
 <div class="container-fluid copyright">
   <div class="row align-middle">
-    <p>2018 &copy; <a href="#" <span class="logo-font">pita<span class="color-blue">cc</span>a</span></a> All Rights Reserved</p>
+    <p>2018 &copy; <a href="index.php" <span class="logo-font">pita<span class="color-blue">cc</span>a</span></a> All Rights Reserved</p>
 
   </div>
 </div>

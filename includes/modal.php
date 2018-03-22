@@ -13,28 +13,23 @@
                 <div class="tab-content">
 
                   <!-- LOGIN -->
-                  <div class="row tab-pane active" id="login">
+                  <div class="row tab-pane fade" id="login">
   	                  <div class="col-xs-6">
   	                      <div class="well">
-  	                          <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+  	                          <form id="loginForm" method="POST" action="includes/login.php">
   	                              <div class="form-group">
-  	                                  <label for="username" class="control-label">Username</label>
-  	                                  <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="">
-  	                                  <span class="help-block"></span>
+  	                                  <input type="text" class="form-control" name="phone" placeholder="Phone Number">
   	                              </div>
   	                              <div class="form-group">
-  	                                  <label for="password" class="control-label">Password</label>
-  	                                  <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
-  	                                  <span class="help-block"></span>
+  	                                  <input type="password" class="form-control" name="password" placeholder="Password">
   	                              </div>
   	                              <div id="loginErrorMsg" class="alert alert-error hide">Wrong username or password</div>
-  	                              <div class="checkbox">
+  	                              <!-- <div class="checkbox">
   	                                  <label>
   	                                      <input type="checkbox" name="remember" id="remember"> <small>Remember login</small>
   	                                  </label>
-  	                                  <span class="help-block"></span>
-  	                              </div>
-  	                              <button type="submit" class="btn btn-success btn-block">Login</button>
+  	                              </div> -->
+  	                              <button type="submit" name="submit" class="btn btn-success btn-block">Login</button>
   	                              <p class="text-center"><a href="#forgotpassword" data-toggle="tab"><small>Forgot password?</small></a></p>
   	                          </form>
   	                      </div>
@@ -46,43 +41,31 @@
   	              </div>
 
                   <!-- SIGN UP -->
-                  <div class="row tab-pane fade" id="signup">
+                  <div class="row tab-pane active" id="signup">
   	                  <div class="col-xs-12">
   	                      <div class="well">
-  	                          <form id="loginForm" method="POST" action="includes/signup.php" novalidate="novalidate">
+  	                          <form id="loginForm" method="POST" action="includes/signup.php">
                                 <div class="col-xs-6">
   	                              <div class="form-group">
-  	                                  <label for="firstname" class="control-label">First Name</label>
-  	                                  <input type="text" class="form-control" id="first-name" name="firstname" value="" required="" title="Please enter you first name" placeholder="">
-  	                                  <span class="help-block"></span>
+  	                                  <input type="text" class="form-control" name="firstname" placeholder="First Name">
   	                              </div>
                                   <div class="form-group">
-  	                                  <label for="lastname" class="control-label">Last Name</label>
-  	                                  <input type="text" class="form-control" id="last-name" name="lastname" value="" required="" title="Please enter you last name" placeholder="">
-  	                                  <span class="help-block"></span>
+  	                                  <input type="text" class="form-control" name="lastname" placeholder="Last Name">
   	                              </div>
                                   <div class="form-group">
-  	                                  <label for="phone" class="control-label">Phone Number</label>
-  	                                  <input type="number" class="form-control" id="phone-num" name="phone" value="" required="" title="Please enter you phone number" placeholder="">
-  	                                  <span class="help-block"></span>
+  	                                  <input type="number" class="form-control" name="phone" placeholder="Phone Number">
   	                              </div>
                                 </div>
 
                                 <div class="col-xs-6">
   	                              <div class="form-group">
-  	                                  <label for="email" class="control-label">Email</label>
-  	                                  <input type="email" class="form-control" id="e-mail" name="email" value="" required="" title="Please enter your password">
-  	                                  <span class="help-block"></span>
+  	                                  <input type="email" class="form-control" name="email" placeholder="E-mail Address">
   	                              </div>
   	                              <div class="form-group">
-  	                                  <label for="password" class="control-label">Password</label>
-  	                                  <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
-  	                                  <span class="help-block"></span>
+  	                                  <input type="password" class="form-control" name="password" placeholder="Password">
   	                              </div>
   	                              <div class="form-group">
-  	                                  <label for="confirm-password" class="control-label">Confirm Password</label>
-  	                                  <input type="password" class="form-control" id="confirm-password" name="confirm-password" value="" required="" title="Please confirm your password">
-  	                                  <span class="help-block"></span>
+  	                                  <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password">
   	                              </div>
                                 </div>
 

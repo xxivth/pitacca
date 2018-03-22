@@ -1,4 +1,7 @@
-<?php require_once 'functions.php'; ?>
+<?php
+session_start();
+require_once 'functions.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +50,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-left" href="#"><img class="nav-logo"src="img/nav-logo2.png"></a>
+          <a class="navbar-left" href="index.php"><img class="nav-logo"src="img/nav-logo2.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,32 +59,34 @@
             <li class="active"><a href="#">E-load</a></li>
             <li><a href="#">Pay Bills</a></li>
             <li><a href="#">Fund Transfer</a></li>
-            <!-- <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li> -->
           </ul>
+          <?php
+          // echo $_SESSION['firstName'];
+          if (isset($_SESSION['userID'])) {
 
-          <ul class="nav navbar-nav navbar-right" id="right-nav">
-            <li>
-                <p class="navbar-btn">
-                    <a href="#" data-toggle="modal" data-target="#login-overlay" class="btn btn-primary">Login</a>
-                </p>
-            </li>
-            <!-- <li>
-                <p class="navbar-btn">
-                    <a href="#signup" data-toggle="modal" data-target="#login-overlay" class="btn btn-info">Sign Up</a>
-                </p>
-            </li> -->
-          </ul>
+            echo  '<ul class="nav navbar-nav navbar-center">
+                    <li><a href="#">';
+            echo  $_SESSION["firstName"];
+            echo    '</a></li>
+                  </ul>';
+
+            echo '<form class="navbar-form navbar-right" id="nav-form" action="includes/logout.php" method="POST">
+                    <button type="submit" name="submit" class="btn btn-primary btn-sm">Log Out</button>
+                  </form>';
+          } else {
+            echo  '<form class="navbar-form navbar-right" id="nav-form" action="includes/login.php" method="POST">
+                    <div class="form-group">
+                      <input type="text" name="phone" class="form-control input-sm" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                      <input id="test" type="password" name="password" class="form-control input-sm" placeholder="Password">
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-primary btn-sm">Log In</button>
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#login-overlay">Sign Up</button>
+                  </form>';
+          }
+          ?>
+
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
